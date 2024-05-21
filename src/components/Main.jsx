@@ -6,7 +6,7 @@ function Main() {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://api.spotify.com/v1/browse/featured-playlists", {
+    fetch(`${import.meta.env.VITE_API_MUSIC}browse/featured-playlists`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
